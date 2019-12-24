@@ -3,9 +3,7 @@
 (defn fuel-needed "Calcutes the needed fuel based on the mass" [mass]
   (->>
     mass
-    (#(/ % 3))
-    Math/floor
-    int
+    (#(quot % 3))
     (#(- % 2))))
 
 (defn run "This functions just fetches the input file and process it accordingly" []
